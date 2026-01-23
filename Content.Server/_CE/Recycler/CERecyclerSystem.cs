@@ -6,6 +6,7 @@ using Content.Server.Power.EntitySystems;
 using Content.Shared._CE.Recycler;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Systems;
+using Content.Shared.Gibbing;
 using Content.Shared.Materials;
 using Content.Shared.Stacks;
 using Content.Shared.Whitelist;
@@ -17,7 +18,7 @@ namespace Content.Server._CE.Recycler;
 /// <inheritdoc/>
 public sealed class CERecyclerSystem : CESharedRecyclerSystem
 {
-    [Dependency] private readonly SharedBodySystem _body = default!;
+    [Dependency] private readonly GibbingSystem _gibbing = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
     [Dependency] private readonly MaterialStorageSystem _material = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
@@ -65,7 +66,7 @@ public sealed class CERecyclerSystem : CESharedRecyclerSystem
         _audio.PlayPvs(ent.Comp.RecycleSound, xform.Coordinates);
         if (TryComp<BodyComponent>(other, out var bodyComp))
         {
-            _body.GibBody(other, true, bodyComp);
+            _gibbing.Gib(other);
             return;
         }
 

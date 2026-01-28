@@ -2,25 +2,17 @@
     "version": 1,
     "size": {
         "x": 32,
-        "y": 64
+        "y": 74
     },
-    "license": "CC-BY-SA-3.0",
-    "copyright": "Created by TheShuEd (github)",
+	"license": "CC-BY-SA-3.0",
+	"copyright": "Created by TheShuEd (github)",
     "states": [
         {
-            "name": "charging0"
-        },
-        {
-            "name": "charging1"
-        },
-        {
-            "name": "discharging1"
-        },
-        {
-            "name": "discharging2"
-        },
-        {
             "name": "base",
+            "directions": 4
+        },
+        {
+            "name": "broken",
             "directions": 4
         },
         {
@@ -30,6 +22,61 @@
         {
             "name": "top",
             "directions": 4
+        },
+        {
+            "name": "dicharging1"
+        },
+        {
+            "name": "dicharging2"
+        },
+        {
+            "name": "charging0"
+        },
+        {
+            "name": "charging1",
+            "directions": 4,
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
         },
         {
             "name": "fill-1",

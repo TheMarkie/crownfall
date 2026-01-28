@@ -6,9 +6,7 @@
 using System.Numerics;
 using Content.Shared._CE.ZLevels.Core.Components;
 using Content.Shared.Chasm;
-using Content.Shared.Damage;
-using Content.Shared.Damage.Components;
-using Content.Shared.Damage.Prototypes;
+using Content.Shared.Inventory;
 using Content.Shared.Throwing;
 using JetBrains.Annotations;
 using Robust.Shared.Audio;
@@ -142,7 +140,8 @@ public abstract partial class CESharedZLevelsSystem
                 {
                     if (MathF.Abs(zPhys.Velocity) >= ImpactVelocityLimit)
                     {
-                        RaiseLocalEvent(uid, new CEZLevelHitEvent(-zPhys.Velocity));
+                        var ev = new CEZLevelHitEvent(-zPhys.Velocity);
+                        RaiseLocalEvent(uid, ref ev);
                         var land = new LandEvent(null, true);
                         RaiseLocalEvent(uid, ref land);
                     }
@@ -160,7 +159,7 @@ public abstract partial class CESharedZLevelsSystem
                     if (!zPhys.CurrentStickyGround)
                     {
                         var fallEv = new CEZLevelFallMapEvent();
-                        RaiseLocalEvent(uid, fallEv);
+                        RaiseLocalEvent(uid, ref fallEv);
                     }
                 }
             }
@@ -171,7 +170,8 @@ public abstract partial class CESharedZLevelsSystem
                 {
                     if (MathF.Abs(zPhys.Velocity) >= ImpactVelocityLimit)
                     {
-                        RaiseLocalEvent(uid, new CEZLevelHitEvent(zPhys.Velocity));
+                        var ev = new CEZLevelHitEvent(zPhys.Velocity);
+                        RaiseLocalEvent(uid, ref ev);
                         var land = new LandEvent(null, true);
                         RaiseLocalEvent(uid, ref land);
                     }
@@ -423,11 +423,13 @@ public abstract partial class CESharedZLevelsSystem
         if (!_mapQuery.TryComp(targetMap, out var targetMapComp))
             return false;
 
+        var beforeEv = new CEZLevelBeforeMapMoveEvent(offset, targetMap.Value.Comp.Depth);
+        RaiseLocalEvent(ent, ref beforeEv);
 
         _transform.SetMapCoordinates(ent, new MapCoordinates(_transform.GetWorldPosition(ent), targetMapComp.MapId));
 
         var ev = new CEZLevelMapMoveEvent(offset, targetMap.Value.Comp.Depth);
-        RaiseLocalEvent(ent, ev);
+        RaiseLocalEvent(ent, ref ev);
 
         return true;
     }
@@ -454,6 +456,12 @@ public abstract partial class CESharedZLevelsSystem
         if (HasComp<ChasmFallingComponent>(ent))
             return false; //Already falling
 
+        var attempt = new CEZLevelChasmAttempt(ent);
+        RaiseLocalEvent(ent, attempt);
+
+        if (attempt.Cancelled)
+            return false;
+
         var audio = new SoundPathSpecifier("/Audio/Effects/falling.ogg");
         _audio.PlayPredicted(audio, Transform(ent).Coordinates, ent);
         var falling = AddComp<ChasmFallingComponent>(ent);
@@ -465,10 +473,11 @@ public abstract partial class CESharedZLevelsSystem
 }
 
 /// <summary>
-/// Is called on an entity when it moves between z-levels.
+/// Is called on an entity right before it moves between z-levels.
 /// </summary>
 /// <param name="offset">How many levels were crossed. If negative, it means there was a downward movement. If positive, it means an upward movement.</param>
-public sealed class CEZLevelMapMoveEvent(int offset, int level) : EntityEventArgs
+[ByRefEvent]
+public struct CEZLevelBeforeMapMoveEvent(int offset, int level)
 {
     /// <summary>
     /// How many levels were crossed. If negative, it means there was a downward movement. If positive, it means an upward movement.
@@ -479,15 +488,41 @@ public sealed class CEZLevelMapMoveEvent(int offset, int level) : EntityEventArg
 }
 
 /// <summary>
+/// Is called on an entity when it moves between z-levels.
+/// </summary>
+/// <param name="offset">How many levels were crossed. If negative, it means there was a downward movement. If positive, it means an upward movement.</param>
+[ByRefEvent]
+public struct CEZLevelMapMoveEvent(int offset, int level)
+{
+    /// <summary>
+    /// How many levels were crossed. If negative, it means there was a downward movement. If positive, it means an upward movement.
+    /// </summary>
+    public int Offset = offset;
+
+    public int CurrentZLevel = level;
+}
+
+/// <summary>
+///Called upon the essence before attempting to fall into the abyss
+/// </summary>
+public sealed class CEZLevelChasmAttempt(EntityUid falled) : CancellableEntityEventArgs, IInventoryRelayEvent
+{
+    public EntityUid Falled = falled;
+    public SlotFlags TargetSlots => SlotFlags.All;
+}
+
+/// <summary>
 /// Is triggered when an entity falls to the lower z-levels under the force of gravity
 /// </summary>
-public sealed class CEZLevelFallMapEvent : EntityEventArgs;
+[ByRefEvent]
+public struct CEZLevelFallMapEvent;
 
 /// <summary>
 /// It is called on an entity when it hits the floor or ceiling with force.
 /// </summary>
 /// <param name="impactPower">The speed at the moment of impact. Always positive</param>
-public sealed class CEZLevelHitEvent(float impactPower) : EntityEventArgs
+[ByRefEvent]
+public struct CEZLevelHitEvent(float impactPower)
 {
     /// <summary>
     /// The speed at the moment of impact. Always positive

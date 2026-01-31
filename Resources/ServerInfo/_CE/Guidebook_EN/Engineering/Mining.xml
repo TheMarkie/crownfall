@@ -30,7 +30,7 @@ This is a quick way to obtain resources, but it is limited, as new ore does not 
 
 ## Automated Mining
 
-While exploring the map, you may find special deposits called "Ore Cores," which provide [color=yellow]an infinite amount of resources[/color].
+While exploring the map, you may find special deposits called "Ore Cores," which provide [color=yellow]an infinite source of resources[/color].
 
 <Box>
   <GuideEntityEmbed Entity="CEWallCoalCore"/>

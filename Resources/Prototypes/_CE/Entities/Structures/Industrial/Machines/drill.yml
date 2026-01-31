@@ -62,6 +62,7 @@
     range: 1
     attackRate: 1
   - type: Rotatable
+    rotateWhileAnchored: true
   - type: StatusEffects
     allowed:
     - Jitter

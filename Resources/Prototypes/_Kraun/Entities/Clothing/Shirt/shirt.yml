@@ -1,0 +1,32 @@
+- type: entity
+  parent: CEClothingShirtBase
+  id: KraunClothingShirtTunic
+  name: cotton tunic
+  description: A simple cloth tunic for lowerclassmen.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Shirt/tunic.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Shirt/tunic.rsi
+
+- type: entity
+  parent: CEClothingShirtBase
+  id: KraunClothingShirtButtonup
+  name: linen button-up shirt
+  description: A basic button-up shirt made of crisp linen.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Shirt/buttonup.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Shirt/buttonup.rsi
+
+- type: entity
+  parent: CEClothingShirtBase
+  id: KraunClothingShirtDoublet
+  name: noble doublet
+  description: A segmented nobleman's doublet made of fine, imported silk
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Shirt/doublet.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Shirt/doublet.rsi

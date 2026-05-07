@@ -1,0 +1,11 @@
+
+- type: entity
+  parent: CEClothingPantsBase
+  id: KraunClothingPantsTrousers
+  name: trousers
+  description: A pair of working man's trousers. Made from tough cloth.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Pants/trousers.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Pants/trousers.rsi

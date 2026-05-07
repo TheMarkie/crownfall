@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-dotnet run --project Content.Client
+dotnet run -c Release -p Content.Client
 read -p "Press enter to continue"

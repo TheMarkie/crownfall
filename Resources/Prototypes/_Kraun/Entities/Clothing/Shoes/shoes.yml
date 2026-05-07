@@ -1,0 +1,10 @@
+- type: entity
+  parent: CEClothingShoesBase
+  id: KraunShortboots
+  name: leather shortboots
+  description: A pair of leather ankle-length boots. Seems shoddily made.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Shoes/shortboots.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Shoes/shortboots.rsi

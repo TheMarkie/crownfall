@@ -8,3 +8,14 @@
     sprite: _Kraun/Clothing/Shoes/shortboots.rsi
   - type: Clothing
     sprite: _Kraun/Clothing/Shoes/shortboots.rsi
+
+- type: entity
+  parent: CEClothingShoesBase
+  id: KraunTrenchboots
+  name: reinforced trenchboots
+  description: A pair of leather combat boots reinforced along the heels and shins with battered steel.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Shoes/trenchboots.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Shoes/trenchboots.rsi

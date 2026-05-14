@@ -1,0 +1,14 @@
+- type: entity
+  parent: CEClothingHeadBase
+  id: KraunClothingHeadSallet
+  name: steel imperial sallet
+  description: A mass-produced sallet helmet with it's visor intact.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Head/Helmet/sallet.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Head/Helmet/sallet.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - HeadTop

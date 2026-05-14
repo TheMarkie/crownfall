@@ -1,0 +1,23 @@
+- type: entity
+  parent: CEClothingOuterClothingBase
+  id: KraunEmpireSurcoat
+  name: reinforced imperial surcoat
+  description: A simple rough cloth surcoat over a chainmail haubergeon, with an Imperial Shield rondel guarding the shoulder. Simple and mass-issued to troops everywhere.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Outer/empiresurcoat.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Outer/empiresurcoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.65
+        Piercing: 0.8
+        Shock: 0.9
+  - type: ClothingSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
+  - type: HeldSpeedModifier
+  - type: StaticPrice
+    price: 300

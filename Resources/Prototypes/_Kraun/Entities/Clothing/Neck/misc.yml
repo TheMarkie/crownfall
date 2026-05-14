@@ -1,0 +1,11 @@
+- type: entity
+  parent:
+  - CEClothingCloakBase
+  id: KraunClothingNeckBevor
+  name: steel bevor
+  description: A steel bevor typically paired with other pieces of steel plate.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Neck/bevor.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Neck/bevor.rsi

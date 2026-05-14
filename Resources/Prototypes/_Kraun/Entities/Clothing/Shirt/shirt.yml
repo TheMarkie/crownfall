@@ -11,6 +11,17 @@
 
 - type: entity
   parent: CEClothingShirtBase
+  id: KraunClothingShirtGambeson
+  name: quilted cotton gambeson
+  description: A well-padded, quilted body armor made of stuffed cotton.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Shirt/gambeson.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Shirt/gambeson.rsi
+
+- type: entity
+  parent: CEClothingShirtBase
   id: KraunClothingShirtButtonup
   name: linen button-up shirt
   description: A basic button-up shirt made of crisp linen.

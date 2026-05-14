@@ -1,0 +1,42 @@
+- type: entity
+  id: KraunGunArmsman
+  parent:
+  - BaseLaserRifle
+  - BaseGunWieldable
+  name: 650mP 'Armsman' mana trenchrifle
+  description: A low-charge trench rifle that expels concentrated beams of mana. Comes with a bayonet.
+  categories: [ ForkFiltered ]
+  components:
+  - type: Sprite
+    sprite: _Kraun/Objects/Weapons/Guns/armsman.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _Kraun/Objects/Weapons/Guns/armsman.rsi
+    equipDelay: 1
+    unequipDelay: 1.5
+    equipWhileMoving: true
+    slots:
+    - neck
+  - type: Item
+    size: Ginormous
+    shape:
+    - 0, 0, 4, 1 # 2x5
+  - type: BatteryAmmoProvider
+    proto: CEPeaceKeeperHitscan
+    fireCost: 10
+  - type: Battery
+    maxCharge: 50
+    startingCharge: 50
+  - type: Gun
+    fireRate: 0.5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+      params:
+        variation: 0.2
+  - type: StaticPrice
+    price: 350

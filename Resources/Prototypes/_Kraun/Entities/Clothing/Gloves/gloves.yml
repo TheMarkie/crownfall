@@ -1,0 +1,10 @@
+- type: entity
+  parent: CEClothingGlovesBase
+  id: KraunClothingGlovesEmpire
+  name: imperial combat gloves
+  description: Armored combat gloves.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Gloves/zealot.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Gloves/zealot.rsi

@@ -1,7 +1,7 @@
 - type: species
   id: CECarrin
   name: ce-species-name-carrin
-  roundStart: true
+  roundStart: false
   prototype: CEMobCarrin
   sprites: CEMobCarrinSprites
   markingLimits: CEMobCarrinMarkingLimits

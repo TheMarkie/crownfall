@@ -1,7 +1,7 @@
 - type: species
   id: CESilva
   name: ce-species-name-silva
-  roundStart: true
+  roundStart: false
   prototype: CEMobSilva
   sprites: CEMobSilvaSprites
   markingLimits: CEMobSilvaMarkingLimits

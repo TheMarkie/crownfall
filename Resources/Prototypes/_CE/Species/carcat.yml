@@ -1,7 +1,7 @@
 - type: species
   id: CECarcat
   name: ce-species-name-carcat
-  roundStart: true
+  roundStart: false
   prototype: CEMobCarcat
   sprites: CEMobCarcatSprites
   markingLimits: CEMobCarcatMarkingLimits

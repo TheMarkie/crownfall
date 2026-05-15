@@ -1,0 +1,127 @@
+- type: entity
+  parent: BaseStructure
+  id: CEFloorWaterOptimized
+  name: water
+  suffix: Optimized, Empty
+  description: A trough of plain water. Clean enough for consumption
+  categories: [ ForkFiltered ]
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: PlacementReplacement
+    key: floorTile
+  - type: Sprite
+    sprite: _CE/Tiles/Water/water.rsi
+    drawdepth: BelowFloor
+    color: "#ffffffee"
+  - type: IconSmooth
+    key: CEWater
+    additionalKeys:
+    - CEwall
+    base: water
+  - type: Icon
+    sprite: _CE/Tiles/Water/water.rsi
+    state: full
+  - type: FloorOccluder
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: SyncSprite
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.5
+    sprintSpeedModifier: 0.5
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+          - SlipLayer
+        mask:
+          - ItemMask
+        density: 1000
+        hard: false
+      fix2: # For block AI movement
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        density: 30
+        mask:
+        - ItemMask
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepWater
+      params:
+        volume: 8
+  - type: Tag
+    tags:
+      - HideContextMenu
+      - CEAmbientWater
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    intersectRatio: 0.1
+    blacklist:
+      tags:
+      - Catwalk
+
+- type: entity
+  parent: CEFloorWaterOptimized
+  id: CEFloorWaterOptimizedDeep
+  name: deep water
+  suffix: Deep, Air damage
+  components:
+  - type: Sprite
+    color: "#fffffffd"
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.2
+    sprintSpeedModifier: 0.2
+  - type: DamageContacts
+    damage:
+      types:
+        Asphyxiation: 2.5
+
+- type: entity
+  parent: CEFloorWaterOptimized
+  id: CEFloorWater
+  suffix: Normal
+  components:
+  - type: DrawableSolution
+    solution: pool
+  - type: SolutionContainerManager
+    solutions:
+      pool:
+        maxVol: 9999999 #.inf seems to break the whole yaml file, but would definitely be preferable.
+        reagents:
+        - ReagentId: Water
+          Quantity: 9999999
+  - type: DrainableSolution
+    solution: pool
+
+- type: entity
+  parent: CEFloorWater
+  id: CEFloorWaterLilies
+  suffix: Water lily spawner
+  components:
+  - type: RandomSpawner
+    prototypes:
+    - CEWaterLilies
+    chance: 1
+    offset: 0.2
+    deleteSpawnerAfterSpawn: false
+
+- type: entity
+  parent: CEFloorWater
+  id: CEFloorWaterReeds
+  suffix: Reeds spawner
+  components:
+  - type: RandomSpawner
+    prototypes:
+    - CEWaterReeds
+    chance: 1
+    offset: 0.2
+    deleteSpawnerAfterSpawn: false

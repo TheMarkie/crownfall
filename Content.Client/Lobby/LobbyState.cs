@@ -63,9 +63,6 @@ namespace Content.Client.Lobby
                 ? Loc.GetString("ui-lobby-title", ("serverName", serverName))
                 : lobbyNameCvar;
 
-            var width = _cfg.GetCVar(CCVars.ServerLobbyRightPanelWidth);
-            Lobby.RightSide.SetWidth = width;
-
             UpdateLobbyUi();
 
             Lobby.CharacterPreview.CharacterSetupButton.OnPressed += OnSetupPressed;
@@ -199,26 +196,6 @@ namespace Content.Client.Lobby
             {
                 Lobby!.ServerInfo.SetInfoBlob(_gameTicker.ServerInfoBlob);
             }
-
-            var minutesToday = _playtimeTracking.PlaytimeMinutesToday;
-            if (minutesToday > 60)
-            {
-                Lobby!.PlaytimeComment.Visible = true;
-
-                var hoursToday = Math.Round(minutesToday / 60f, 1);
-
-                var chosenString = minutesToday switch
-                {
-                    < 180 => "lobby-state-playtime-comment-normal",
-                    < 360 => "lobby-state-playtime-comment-concerning",
-                    < 720 => "lobby-state-playtime-comment-grasstouchless",
-                    _ => "lobby-state-playtime-comment-selfdestructive"
-                };
-
-                Lobby.PlaytimeComment.SetMarkup(Loc.GetString(chosenString, ("hours", hoursToday)));
-            }
-            else
-                Lobby!.PlaytimeComment.Visible = false;
         }
 
         private void UpdateLobbySoundtrackInfo(LobbySoundtrackChangedEvent ev)

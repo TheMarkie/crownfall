@@ -13,6 +13,24 @@ namespace Content.Client.Stylesheets
     [Obsolete("Please use the new sheetlet system to define styles, and remove all references to this class as it may be deleted in the future")]
     public abstract class StyleBase
     {
+        public const string ClassHighDivider = "HighDivider";
+        public const string ClassLowDivider = "LowDivider";
+        public const string StyleClassLabelHeading = "LabelHeading";
+        public const string StyleClassLabelSubText = "LabelSubText";
+        public const string StyleClassItalic = "Italic";
+
+        public const string ClassAngleRect = "AngleRect";
+
+        public const string ButtonOpenRight = "OpenRight";
+        public const string ButtonOpenLeft = "OpenLeft";
+        public const string ButtonOpenBoth = "OpenBoth";
+        public const string ButtonSquare = "ButtonSquare";
+
+        public const string ButtonCaution = "Caution";
+        public const string ButtonDanger = "Danger";
+
+        public const int DefaultGrabberSize = 10;
+
         public abstract Stylesheet Stylesheet { get; }
 
         protected StyleRule[] BaseRules { get; }
@@ -107,6 +125,45 @@ namespace Content.Client.Stylesheets
             };
             AngleBorderRect.SetPatchMargin(StyleBox.Margin.All, 10);
 
+            var vScrollBarGrabberNormal = new StyleBoxFlat
+            {
+                BackgroundColor = Color.FromHex("#5A4524").WithAlpha(0.65f),
+                ContentMarginLeftOverride = DefaultGrabberSize,
+                ContentMarginTopOverride = DefaultGrabberSize
+            };
+
+            var vScrollBarGrabberHover = new StyleBoxFlat
+            {
+                BackgroundColor = Color.FromHex("#7A6135").WithAlpha(0.75f),
+                ContentMarginLeftOverride = DefaultGrabberSize,
+                ContentMarginTopOverride = DefaultGrabberSize
+            };
+
+            var vScrollBarGrabberGrabbed = new StyleBoxFlat
+            {
+                BackgroundColor = Color.FromHex("#A88B5E").WithAlpha(0.85f),
+                ContentMarginLeftOverride = DefaultGrabberSize,
+                ContentMarginTopOverride = DefaultGrabberSize
+            };
+
+            var hScrollBarGrabberNormal = new StyleBoxFlat
+            {
+                BackgroundColor = Color.FromHex("#5A4524").WithAlpha(0.65f),
+                ContentMarginTopOverride = DefaultGrabberSize
+            };
+
+            var hScrollBarGrabberHover = new StyleBoxFlat
+            {
+                BackgroundColor = Color.FromHex("#7A6135").WithAlpha(0.75f),
+                ContentMarginTopOverride = DefaultGrabberSize
+            };
+
+            var hScrollBarGrabberGrabbed = new StyleBoxFlat
+            {
+                BackgroundColor = Color.FromHex("#A88B5E").WithAlpha(0.85f),
+                ContentMarginTopOverride = DefaultGrabberSize
+            };
+
 
             BaseRules = new[]
             {
@@ -120,7 +177,7 @@ namespace Content.Client.Stylesheets
 
                 // Default font.
                 new StyleRule(
-                    new SelectorElement(null, new[] {StyleClass.Italic}, null, null),
+                    new SelectorElement(null, new[] {StyleClassItalic}, null, null),
                     new[]
                     {
                         new StyleProperty("font", notoSans12Italic),
@@ -133,7 +190,7 @@ namespace Content.Client.Stylesheets
                     new[]
                     {
                         new StyleProperty(TextureButton.StylePropertyTexture, textureCloseButton),
-                        new StyleProperty(Control.StylePropertyModulateSelf, Color.FromHex("#4B596A")),
+                        new StyleProperty(Control.StylePropertyModulateSelf, StyleNano.NanoGold),
                     }),
                 // Window close button hover.
                 new StyleRule(
@@ -150,6 +207,53 @@ namespace Content.Client.Stylesheets
                     new[]
                     {
                         new StyleProperty(Control.StylePropertyModulateSelf, Color.FromHex("#753131")),
+                    }),
+
+                // Scroll bars
+                new StyleRule(new SelectorElement(typeof(VScrollBar), null, null, null),
+                    new[]
+                    {
+                        new StyleProperty(ScrollBar.StylePropertyGrabber,
+                            vScrollBarGrabberNormal),
+                    }),
+
+                new StyleRule(
+                    new SelectorElement(typeof(VScrollBar), null, null, new[] {ScrollBar.StylePseudoClassHover}),
+                    new[]
+                    {
+                        new StyleProperty(ScrollBar.StylePropertyGrabber,
+                            vScrollBarGrabberHover),
+                    }),
+
+                new StyleRule(
+                    new SelectorElement(typeof(VScrollBar), null, null, new[] {ScrollBar.StylePseudoClassGrabbed}),
+                    new[]
+                    {
+                        new StyleProperty(ScrollBar.StylePropertyGrabber,
+                            vScrollBarGrabberGrabbed),
+                    }),
+
+                new StyleRule(new SelectorElement(typeof(HScrollBar), null, null, null),
+                    new[]
+                    {
+                        new StyleProperty(ScrollBar.StylePropertyGrabber,
+                            hScrollBarGrabberNormal),
+                    }),
+
+                new StyleRule(
+                    new SelectorElement(typeof(HScrollBar), null, null, new[] {ScrollBar.StylePseudoClassHover}),
+                    new[]
+                    {
+                        new StyleProperty(ScrollBar.StylePropertyGrabber,
+                            hScrollBarGrabberHover),
+                    }),
+
+                new StyleRule(
+                    new SelectorElement(typeof(HScrollBar), null, null, new[] {ScrollBar.StylePseudoClassGrabbed}),
+                    new[]
+                    {
+                        new StyleProperty(ScrollBar.StylePropertyGrabber,
+                            hScrollBarGrabberGrabbed),
                     }),
             };
         }

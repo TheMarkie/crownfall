@@ -62,8 +62,6 @@ namespace Content.Client.Lobby.UI
             RulesButton.OnPressed += _ => new RulesAndInfoWindow().Open();
 
             StatsButton.OnPressed += _ => new PlaytimeStatsWindow().OpenCentered();
-
-            _cfg.OnValueChanged(CCVars.SeeOwnNotes, p => AdminRemarksButton.Visible = p, true);
         }
 
         /// <summary>

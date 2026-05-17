@@ -2,10 +2,10 @@
   id: TypicalAlchemistDay
   background: /Textures/_Kraun/LobbyScreens/trenchface.webp
   title: Trenchface
-  artist: The Crown
+  artist: Pulse Blue #https://pulse-blue.itch.io/
 
 - type: lobbyBackground
   id: Kraun
   background: /Textures/_Kraun/LobbyScreens/kraun.webp
   title: Armsman
-  artist: The Crown
+  artist: Pulse Blue #https://pulse-blue.itch.io/

@@ -1,0 +1,9 @@
+
+- type: weather
+  id: Mist
+  offsetSpeed: 0.04, 0.06
+  color: "#a9c4bf"
+  alpha: 0.8
+  sprite:
+    sprite: /Textures/_Kraun/Effects/parallax.rsi
+    state: noise

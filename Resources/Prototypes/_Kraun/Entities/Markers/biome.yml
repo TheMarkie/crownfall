@@ -1,0 +1,15 @@
+
+- type: entity
+  id: CEBiomeSpawnerWasteland
+  parent: CEBaseBiomeSpawner
+  suffix: No Man's Land
+  components:
+  - type: CEBiomeSpawner
+    biome: Trenchland
+  - type: Sprite
+    snapCardinals: true
+    drawdepth: BelowFloor
+    sprite: _Kraun/Markers/biome.rsi
+    layers:
+      - state: dirt
+      - state: frame

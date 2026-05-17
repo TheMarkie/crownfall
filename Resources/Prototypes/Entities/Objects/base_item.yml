@@ -9,6 +9,7 @@
   - type: Clickable
   - type: InteractionOutline
   - type: MovedByPressure
+  - type: ESViewconeOccludable
   - type: EmitSoundOnCollide
     sound:
       collection: WeakHit

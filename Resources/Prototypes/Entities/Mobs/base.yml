@@ -22,6 +22,10 @@
         - MobLayer
   - type: Clickable
   - type: InteractionOutline
+  - type: ESViewcone
+  - type: ESViewconeOccludable
+  - type: MouseRotator
+  - type: NoRotateOnMove
   - type: Input
     context: "human"
   - type: Actions

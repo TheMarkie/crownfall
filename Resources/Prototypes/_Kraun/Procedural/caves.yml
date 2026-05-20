@@ -1,11 +1,11 @@
 - type: biomeTemplate
-  id: CP14CavesEmpty
+  id: CavesEmpty
   layers:
     - !type:BiomeTileLayer
       threshold: -1.0
-      tile: CP14FloorBase
+      tile: CEStone
     - !type:BiomeTileLayer
-      tile: CP14FloorCobblestone
+      tile: CECobblestone
       threshold: 0.3
       noise:
         seed: 14
@@ -13,7 +13,7 @@
         fractalType: FBm
         frequency: 0.2
     - !type:BiomeTileLayer
-      tile: CP14FloorDirt
+      tile: CEDirt
       threshold: 0.3
       noise:
         seed: 18
@@ -23,10 +23,10 @@
 
 
 - type: biomeTemplate
-  id: CP14CavesFloor
+  id: CavesFloor
   layers:
     - !type:BiomeMetaLayer
-      template: CP14CavesEmpty
+      template: CCavesEmpty
     #Entity
     - !type:BiomeEntityLayer
       threshold: 0.4
@@ -36,11 +36,11 @@
         fractalType: FBm
         frequency: 2
       allowedTiles:
-        - CP14FloorBase
-        - CP14FloorDirt
-        - CP14FloorCobblestone
+        - CEStone
+        - CEDirt
+        - CE4FloorCobblestone
       entities:
-        - CP14RockSmall
+        - CERockSmall
 
 - type: biomeTemplate
   id: CP14CavesGeneric

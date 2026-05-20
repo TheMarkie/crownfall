@@ -35,9 +35,31 @@
   parent: CEClothingShirtBase
   id: KraunClothingShirtDoublet
   name: noble doublet
-  description: A segmented nobleman's doublet made of fine, imported silk
+  description: A segmented nobleman's doublet made of fine, imported silk.
   components:
   - type: Sprite
     sprite: _Kraun/Clothing/Shirt/doublet.rsi
   - type: Clothing
     sprite: _Kraun/Clothing/Shirt/doublet.rsi
+
+- type: entity
+  parent: CEClothingShirtBase
+  id: KraunClothingShirtNationSurcoat
+  name: republic surcoat
+  description: A long, rugged surcoat of the Republic. You're pretty sure someone died in this.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Shirt/nation.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Shirt/nation.rsi
+
+- type: entity
+  parent: CEClothingShirtBase
+  id: KraunClothingShirtNationSurcoatOfficer
+  name: republic officer's surcoat
+  description: A long, rugged surcoat of the Republic. This one seems to be slightly fancier and cleaner.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Shirt/nationofficer.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Shirt/nationofficer.rsi

@@ -51,7 +51,7 @@
         seed: 0
         noiseType: OpenSimplex2
         fractalType: FBm
-        frequency: 3
+        frequency: 4
       allowedTiles:
         - CEDirt
         - CEStone

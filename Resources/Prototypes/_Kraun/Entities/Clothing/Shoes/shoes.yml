@@ -19,3 +19,14 @@
     sprite: _Kraun/Clothing/Shoes/trenchboots.rsi
   - type: Clothing
     sprite: _Kraun/Clothing/Shoes/trenchboots.rsi
+
+- type: entity
+  parent: CEClothingShoesBase
+  id: KraunBootsGood
+  name: fine leather boots
+  description: A pair of fine black leather boots, made from soft cowhide.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Shoes/fineboots.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Shoes/fineboots.rsi

@@ -21,3 +21,76 @@
   - type: HeldSpeedModifier
   - type: StaticPrice
     price: 300
+
+- type: entity
+  parent: CEClothingOuterClothingBase
+  id: KraunNationCuirass
+  name: steel republic cuirass
+  description: A darksteel plate cuirass, typically worn over uniforms and surcoats.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Outer/nationcuirass.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Outer/nationcuirass.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.65
+        Piercing: 0.8
+        Shock: 0.9
+  - type: ClothingSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
+  - type: HeldSpeedModifier
+  - type: StaticPrice
+    price: 300
+
+- type: entity
+  parent: CEClothingOuterClothingBase
+  id: KraunNationHeavyPlate
+  name: plated northguard carapace
+  description: A tough layer of darksteel breastplate and pauldrons to shrug off kinetic blows.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Outer/northguard.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Outer/northguard.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.5
+        Piercing: 0.6
+        Shock: 0.9
+  - type: ClothingSpeedModifier
+    walkModifier: 0.6
+    sprintModifier: 0.6
+  - type: HeldSpeedModifier
+  - type: StaticPrice
+    price: 450
+
+- type: entity
+  parent: CEClothingOuterClothingBase
+  id: KraunEmpireHeavyPlate
+  name: plated imperial hauberk
+  description: A thigh-length coat of chainmail layered over with a steel cuirass for protection. Heavy but durable.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Outer/empirehauberk.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Outer/empirehauberk.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.5
+        Piercing: 0.6
+        Shock: 0.9
+  - type: ClothingSpeedModifier
+    walkModifier: 0.6
+    sprintModifier: 0.6
+  - type: HeldSpeedModifier
+  - type: StaticPrice
+    price: 450
+

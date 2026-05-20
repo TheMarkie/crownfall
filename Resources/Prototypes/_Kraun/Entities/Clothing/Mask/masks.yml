@@ -1,0 +1,25 @@
+
+
+- type: entity
+  parent: CEClothingMaskIdentityBlockerBase
+  id: KraunClothingMaskTrench
+  name: full trenchmask
+  description: A leather gasmask with two big, round portals.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Mask/trenchmask.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Mask/trenchmask.rsi
+
+
+
+- type: entity
+  parent: CEClothingMaskIdentityBlockerBase
+  id: KraunClothingMaskConfessor
+  name: strapped trenchmask
+  description: A leather gasmask with two big, round portals.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Mask/confessormask.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Mask/confessormask.rsi

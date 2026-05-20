@@ -9,3 +9,26 @@
     sprite: _Kraun/Clothing/Pants/trousers.rsi
   - type: Clothing
     sprite: _Kraun/Clothing/Pants/trousers.rsi
+
+
+- type: entity
+  parent: CEClothingPantsBase
+  id: KraunClothingPantsTrousersReinforced
+  name: reinforced trousers
+  description: A pair of soldier's trousers reinforced with fabric.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Pants/reinforcedtrousers.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Pants/reinforcedtrousers.rsi
+
+- type: entity
+  parent: CEClothingPantsBase
+  id: KraunClothingPantsHose
+  name: cotton hose
+  description: A hose crafted from soft fabric.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Pants/hose.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Pants/hose.rsi

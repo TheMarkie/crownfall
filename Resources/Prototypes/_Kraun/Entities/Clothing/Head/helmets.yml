@@ -12,3 +12,40 @@
     slots:
     - Hair
     - HeadTop
+
+- type: entity
+  parent: CEClothingHeadBase
+  id: KraunClothingHeadNation
+  name: republic plate helmet
+  description: A mass-produced plate helmet with a thin-slitted visor.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Head/Helmet/nation.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Head/Helmet/nation.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - HeadTop
+
+- type: entity
+  parent: CEClothingHeadBase
+  id: KraunClothingHeadNationCap
+  name: republic field cap
+  description: An ornate field cap, typically seen on Republic officers.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Head/Helmet/nationcap.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Head/Helmet/nationcap.rsi
+
+- type: entity
+  parent: CEClothingHeadBase
+  id: KraunClothingHeadEmpireBarbute
+  name: gilded steel barbute helmet
+  description: An ornate bucket for your head. This one comes with golden gilding.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Head/Helmet/fancybarbute.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Head/Helmet/fancybarbute.rsi

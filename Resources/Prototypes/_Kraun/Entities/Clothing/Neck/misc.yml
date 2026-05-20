@@ -9,3 +9,27 @@
     sprite: _Kraun/Clothing/Neck/bevor.rsi
   - type: Clothing
     sprite: _Kraun/Clothing/Neck/bevor.rsi
+
+- type: entity
+  parent:
+  - CEClothingCloakBase
+  id: KraunClothingNeckNationCloak
+  name: republic officer's cloak
+  description: A ceremonial cloak often attributed to those of middling rank within the Republic army.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Neck/nationcloak.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Neck/nationcloak.rsi
+
+- type: entity
+  parent:
+  - CEClothingCloakBase
+  id: KraunClothingNeckEmpireCloak
+  name: imperial knight's cape
+  description: An ornamental piece with the the sigil of the Crown emblazoned on the back with golden thread.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Neck/empirecloak.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Neck/empirecloak.rsi

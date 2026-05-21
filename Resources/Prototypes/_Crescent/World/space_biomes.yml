@@ -1,0 +1,24 @@
+#fallback, don't remove
+- type: crescentFactionBiome
+  id: default
+  name: NULL
+  swapDuration: 2
+  parallax: Default
+
+#example
+
+- type: entity
+  id: TestBiomeSource
+  name: test source
+  components:
+  - type: SpaceBiomeSource
+    biome: test
+    swapDistance: 1000
+    priority: 1500
+
+- type: crescentFactionBiome
+  id: test
+  name: Test zone
+  swapDuration: 2
+  parallax: Sky
+  description: A zone of ample tests.

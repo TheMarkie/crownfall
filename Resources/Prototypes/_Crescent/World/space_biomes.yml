@@ -1,7 +1,7 @@
 #fallback, don't remove
 - type: crescentFactionBiome
   id: default
-  name: NULL
+  name: Taypani Abyss
   swapDuration: 2
   parallax: Default
 

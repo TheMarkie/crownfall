@@ -16,6 +16,11 @@
     <ProjectReference Include="..\Content.Shared.Database\Content.Shared.Database.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="_Crescent\Misc\" />
+    <Folder Include="_Crescent\SpaceBiomes\" />
+  </ItemGroup>
+
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
   <Import Project="..\RobustToolbox\MSBuild\Robust.CompNetworkGenerator.targets" />
 </Project>

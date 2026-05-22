@@ -4,5 +4,12 @@ namespace Content.Server.Parallax;
 
 public sealed class ParallaxSystem : SharedParallaxSystem
 {
-    // TODO: PORT SWAPPARALLAX FROM HULLROT
+    public void SwapParallax(EntityUid uid, ParallaxComponent parallax, string newParallax, float duration)
+    {
+        parallax.SwappedParallax = parallax.Parallax;
+        parallax.Parallax = newParallax;
+        parallax.SwapTimer = 0;
+        parallax.SwapDuration = duration;
+        Dirty(uid, parallax);
+    }
 }

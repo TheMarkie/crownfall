@@ -1,10 +1,65 @@
 - type: entity
   parent: CEClothingGlovesBase
   id: KraunClothingGlovesEmpire
-  name: imperial combat gloves
-  description: Armored combat gloves.
+  name: imperial zealot's gloves
+  description: A pair of leather gloves with a steel rosary wrapped around one wrist.
   components:
   - type: Sprite
     sprite: _Kraun/Clothing/Gloves/zealot.rsi
   - type: Clothing
     sprite: _Kraun/Clothing/Gloves/zealot.rsi
+
+- type: entity
+  parent: CEClothingGlovesBase
+  id: KraunClothingGlovesTrench
+  name: armored trenchgloves
+  description: Padded, armored combat gloves.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Gloves/trenchgloves.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Gloves/trenchgloves.rsi
+
+- type: entity
+  parent: CEClothingGlovesBase
+  id: KraunClothingGlovesGauntlets
+  name: steel gauntlets
+  description: A pair of steel-plate gauntlets with articulated joints.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Gloves/gauntlets.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Gloves/gauntlets.rsi
+
+- type: entity
+  parent: CEClothingGlovesBase
+  id: KraunClothingGlovesGauntletsAncient
+  name: rusted steel gauntlets
+  description: A pair of steel-plate gauntlets with articulated joints. Aion's grasp is upon it.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Gloves/ancientgauntlets.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Gloves/ancientgauntlets.rsi
+
+- type: entity
+  parent: CEClothingGlovesBase
+  id: KraunClothingGlovesFencer
+  name: leather fencer's gloves
+  description: A pair of supple, light fencer's gloves.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Gloves/fencergloves.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Gloves/fencergloves.rsi
+
+- type: entity
+  parent: CEClothingGlovesBase
+  id: KraunClothingGlovesLong
+  name: leather longgloves
+  description: A pair of long-gloves crafted out of cowhide.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Gloves/longgloves.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Gloves/longgloves.rsi

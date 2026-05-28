@@ -30,3 +30,14 @@
     sprite: _Kraun/Clothing/Shoes/fineboots.rsi
   - type: Clothing
     sprite: _Kraun/Clothing/Shoes/fineboots.rsi
+
+- type: entity
+  parent: CEClothingShoesBase
+  id: KraunBootsSabatons
+  name: steel sabatons
+  description: A pair of steel-plate sabatons. Heavy.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Shoes/sabatons.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Shoes/sabatons.rsi

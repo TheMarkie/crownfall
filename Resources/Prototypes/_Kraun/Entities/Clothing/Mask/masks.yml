@@ -11,8 +11,6 @@
   - type: Clothing
     sprite: _Kraun/Clothing/Mask/trenchmask.rsi
 
-
-
 - type: entity
   parent: CEClothingMaskIdentityBlockerBase
   id: KraunClothingMaskConfessor
@@ -23,3 +21,14 @@
     sprite: _Kraun/Clothing/Mask/confessormask.rsi
   - type: Clothing
     sprite: _Kraun/Clothing/Mask/confessormask.rsi
+
+- type: entity
+  parent: CEClothingMaskIdentityBlockerBase
+  id: KraunClothingMaskCoif
+  name: quilted coif
+  description: A padded, quilted coif meant to worn as underarmor.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Mask/coif.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Mask/coif.rsi

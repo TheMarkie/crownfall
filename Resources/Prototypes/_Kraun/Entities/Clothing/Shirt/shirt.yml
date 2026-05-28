@@ -22,17 +22,6 @@
 
 - type: entity
   parent: CEClothingShirtBase
-  id: KraunClothingShirtButtonup
-  name: linen button-up shirt
-  description: A basic button-up shirt made of crisp linen.
-  components:
-  - type: Sprite
-    sprite: _Kraun/Clothing/Shirt/buttonup.rsi
-  - type: Clothing
-    sprite: _Kraun/Clothing/Shirt/buttonup.rsi
-
-- type: entity
-  parent: CEClothingShirtBase
   id: KraunClothingShirtDoublet
   name: noble doublet
   description: A segmented nobleman's doublet made of fine, imported silk.
@@ -63,3 +52,14 @@
     sprite: _Kraun/Clothing/Shirt/nationofficer.rsi
   - type: Clothing
     sprite: _Kraun/Clothing/Shirt/nationofficer.rsi
+
+- type: entity
+  parent: CEClothingShirtBase
+  id: KraunClothingShirtLowcut
+  name: lowcut blouse
+  description: A short-sleeved, lowcut blouse of soft fabric.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Shirt/lowcut.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Shirt/lowcut.rsi

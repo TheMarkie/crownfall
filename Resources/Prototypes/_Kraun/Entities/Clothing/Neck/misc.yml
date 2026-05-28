@@ -33,3 +33,27 @@
     sprite: _Kraun/Clothing/Neck/empirecloak.rsi
   - type: Clothing
     sprite: _Kraun/Clothing/Neck/empirecloak.rsi
+
+- type: entity
+  parent:
+  - CEClothingCloakBase
+  id: KraunClothingNeckRosary
+  name: string of rosaries
+  description: A string of rosary beads that you could probably wear as a necklace.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Neck/rosarybeads.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Neck/rosarybeads.rsi
+
+- type: entity
+  parent:
+  - CEClothingCloakBase
+  id: KraunClothingNeckShell
+  name: shell necklace
+  description: A clam shell strung on a leather cord, meant to be worn as a necklace.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Neck/oysternecklace.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Neck/oysternecklace.rsi

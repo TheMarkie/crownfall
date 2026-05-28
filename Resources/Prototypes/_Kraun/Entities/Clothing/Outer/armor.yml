@@ -94,3 +94,74 @@
   - type: StaticPrice
     price: 450
 
+- type: entity
+  parent: CEClothingOuterClothingBase
+  id: KraunTrenchSorcerer
+  name: trench sorcerer's robe
+  description: A thigh-length coat of heavy fabric. Dissipated magical energies well along it's frame, and the thick cloth helps dull mundane blows to a degree.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Outer/trenchsorcerer.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Outer/trenchsorcerer.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.8
+        Piercing: 0.8
+        Shock: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  parent: CEClothingOuterClothingBase
+  id: KraunBrigandine
+  name: brigandine vest
+  description: A thigh-length, sleevess leather coat with many metal plates sewn into the inside for protection.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Outer/brigandine.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Outer/birgandine.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.65
+        Piercing: 0.75
+        Shock: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
+  - type: HeldSpeedModifier
+  - type: StaticPrice
+    price: 300
+
+
+- type: entity
+  parent: CEClothingOuterClothingBase
+  id: KraunAncientCuirass
+  name: rusted steel cuirass
+  description: A form-fitting steel cuirass. Aion's grasp is upon it.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Outer/ancientcuirass.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Outer/ancientcuirass.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+  - type: ClothingSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
+  - type: HeldSpeedModifier
+  - type: StaticPrice
+    price: 100

@@ -32,3 +32,14 @@
     sprite: _Kraun/Clothing/Pants/hose.rsi
   - type: Clothing
     sprite: _Kraun/Clothing/Pants/hose.rsi
+
+- type: entity
+  parent: CEClothingPantsBase
+  id: KraunClothingPantsCuisses
+  name: plate cuisses
+  description: Steel-plate armor over a padded, quilted hose.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Pants/platecuisses.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Pants/platecuisses.rsi

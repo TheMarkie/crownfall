@@ -41,7 +41,7 @@
 
 - type: entity
   parent: CEClothingHeadBase
-  id: KraunClothingHeadEmpireBarbute
+  id: KraunClothingHeadEmpireBarbuteFancy
   name: gilded steel barbute helmet
   description: An ornate bucket for your head. This one comes with golden gilding.
   components:
@@ -49,3 +49,47 @@
     sprite: _Kraun/Clothing/Head/Helmet/fancybarbute.rsi
   - type: Clothing
     sprite: _Kraun/Clothing/Head/Helmet/fancybarbute.rsi
+
+- type: entity
+  parent: CEClothingHeadBase
+  id: KraunClothingHeadEmpireBarbute
+  name: steel barbute helmet
+  description: A steel bucket for your head. Maybe will stop a mana bullet.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Head/Helmet/barbute.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Head/Helmet/barbute.rsi
+
+- type: entity
+  parent: CEClothingHeadBase
+  id: KraunClothingHeadKettleHelm
+  name: kettle helmet
+  description: A wide-rimmed steel helmet, made of a cheap steel blend.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Head/Helmet/kettle.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Head/Helmet/kettle.rsi
+
+- type: entity
+  parent: CEClothingHeadBase
+  id: KraunClothingHeadSkullcap
+  name: skullcap
+  description: A simple skullcap of cheap iron worn by peasant militias, bandits, and poor mercenaries.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Head/Helmet/skullcap.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Head/Helmet/skullcap.rsi
+
+- type: entity
+  parent: CEClothingHeadBase
+  id: KraunClothingHeadNationMage
+  name: warmage's headpiece
+  description: A drooping sorcerer's headpiece in Republic colors.
+  components:
+  - type: Sprite
+    sprite: _Kraun/Clothing/Head/Helmet/spellcaster.rsi
+  - type: Clothing
+    sprite: _Kraun/Clothing/Head/Helmet/spellcaster.rsi

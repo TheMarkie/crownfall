@@ -1,0 +1,58 @@
+- type: entity
+  id: CEActionToggleMagicVision
+  parent: BaseMentalAction
+  name: Truesight
+  description: You focus on magical flows to track recent events and scan the aura imprints of other living beings.
+  components:
+  - type: Action
+    useDelay: 0.5
+    itemIconStyle: BigAction
+    checkCanInteract: false
+    checkConsciousness: true
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/rumble.ogg
+    icon:
+      sprite: _Kraun/Actions/Spells/meta.rsi
+      state: magic_vision
+  - type: InstantAction
+    event: !type:CEInstantModularEffectEvent
+      effects:
+        - !type:CESpellToggleStatusEffect
+          statusEffect: CEMetaMagicVisionSpellStatusEffect
+
+- type: entity
+  id: CEManaVisionPointer
+  name: pointer
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    color: "#42a4f5"
+    sprite: /Textures/_Kraun/Effects/Magic/pointer.rsi
+    offset: 0, -1
+    layers:
+      - state: pointer
+        shader: unshaded
+    drawdepth: LowFloors
+  - type: TimedDespawn
+    lifetime: 2
+  - type: Tag
+    tags:
+    - HideContextMenu
+
+- type: entity
+  id: CEMagicVisionMarker
+  parent: CESpectralBase
+  categories: [ HideSpawnMenu ]
+  name: mana trace
+  components:
+  - type: Sprite
+    noRot: true
+    drawdepth: Effects
+    layers:
+      - state: sphere
+        sprite: /Textures/_Kraun/Effects/Magic/pointer_sphere.rsi
+        shader: unshaded
+        color: "#42a4f5"
+  - type: Clickable
+  - type: Visibility
+    layer: 16 #magic vision only

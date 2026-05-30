@@ -15,6 +15,7 @@ public sealed partial class CEAuraImprintSystem : CESharedAuraImprintSystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly CESharedMagicVisionSystem _vision = default!;
+
     public override void Initialize()
     {
         base.Initialize();
